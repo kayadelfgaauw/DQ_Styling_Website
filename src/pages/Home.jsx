@@ -105,6 +105,8 @@ export default function Home() {
                         <img
                             src={img.url}
                             alt={img.alt}
+                            fetchPriority={idx === 0 ? "high" : "auto"}
+                            loading="eager"
                             className="w-full h-full object-cover scale-105 animate-[kenburns_10s_ease-in-out_infinite]"
                         />
                         {/* Gradient Overlays for Readability */}

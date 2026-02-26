@@ -38,6 +38,8 @@ export default function CinematicHero({ title, subtitle, image, alt, imagePositi
                         ref={imageRef}
                         src={image}
                         alt={alt || title}
+                        fetchPriority="high"
+                        loading="eager"
                         className={`w-full h-full object-cover ${imagePosition}`}
                     />
                     {/* Gradient Overlays for Readability */}
