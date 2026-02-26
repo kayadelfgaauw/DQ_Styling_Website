@@ -23,8 +23,8 @@ export default function CinematicHero({ title, subtitle, image, alt, imagePositi
         );
 
         tl.fromTo(imageRef.current,
-            { scale: 1.2, opacity: 0 },
-            { scale: 1, opacity: 1, duration: 2 },
+            { scale: 1.2 },
+            { scale: 1, duration: 2 },
             0
         );
     }, { scope: containerRef });

@@ -99,7 +99,7 @@ export default function Navigation() {
             {/* Mobile Menu Overlay */}
             <div
                 className={cn(
-                    'fixed inset-0 bg-background z-40 transition-transform duration-700 ease-in-out md:hidden flex flex-col items-center justify-center gap-8 pt-24',
+                    'fixed top-0 left-0 w-full h-[100dvh] bg-background z-40 transition-transform duration-700 ease-in-out md:hidden flex flex-col items-center justify-center gap-8 pt-24',
                     isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 )}
             >
