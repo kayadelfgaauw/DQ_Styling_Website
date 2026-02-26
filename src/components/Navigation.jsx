@@ -31,14 +31,21 @@ export default function Navigation() {
     }, []);
 
     useEffect(() => {
-        setIsMobileMenuOpen(false);
-    }, [location]);
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMobileMenuOpen]);
 
     return (
         <nav
             className={cn(
                 'fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4',
-                isScrolled ? 'bg-background/80 backdrop-blur-md py-3' : 'bg-transparent'
+                isScrolled || isMobileMenuOpen ? 'bg-background/80 backdrop-blur-md py-3' : 'bg-transparent'
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -77,8 +84,8 @@ export default function Navigation() {
                 {/* Mobile Menu Toggle */}
                 <button
                     className={cn(
-                        "md:hidden p-2 rounded-full transition-colors",
-                        isScrolled ? "text-primary hover:bg-primary/10" : "text-background hover:bg-background/10"
+                        "md:hidden p-2 rounded-full transition-colors z-50",
+                        isMobileMenuOpen || isScrolled ? "text-primary hover:bg-primary/10" : "text-background hover:bg-background/10"
                     )}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label={isMobileMenuOpen ? "Sluit menu" : "Open menu"}
@@ -90,7 +97,7 @@ export default function Navigation() {
             {/* Mobile Menu Overlay */}
             <div
                 className={cn(
-                    'fixed inset-0 top-[88px] bg-background z-40 transition-transform duration-700 ease-in-out md:hidden flex flex-col items-center justify-center gap-8',
+                    'fixed inset-0 bg-background z-40 transition-transform duration-700 ease-in-out md:hidden flex flex-col items-center justify-center gap-8 pt-24',
                     isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 )}
             >
@@ -102,6 +109,7 @@ export default function Navigation() {
                             'font-hatton text-4xl font-bold transition-colors',
                             location.pathname === link.path ? 'text-accent' : 'text-primary'
                         )}
+                        onClick={() => setIsMobileMenuOpen(false)}
                     >
                         {link.name}
                     </Link>
