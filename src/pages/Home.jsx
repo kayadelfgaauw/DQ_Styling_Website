@@ -212,7 +212,7 @@ export default function Home() {
                             to="/contact"
                             className="border border-background/20 px-10 py-5 rounded-full font-bold text-lg hover:bg-background hover:text-primary transition-all duration-300"
                         >
-                            Plan een Bezoek
+                            Neem Contact Op
                         </Link>
                     </div>
                 </div>
