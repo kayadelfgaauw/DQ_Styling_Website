@@ -42,57 +42,59 @@ export default function Navigation() {
     }, [isMobileMenuOpen]);
 
     return (
-        <nav
-            className={cn(
-                'fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4',
-                isScrolled || isMobileMenuOpen ? 'bg-background/80 backdrop-blur-md py-3' : 'bg-transparent'
-            )}
-        >
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
-                <Link to="/" className="group flex items-center gap-3">
-                    <img
-                        src="/Logo/Logo.png"
-                        alt="DQ Styling Logo"
-                        className="h-24 w-auto group-hover:scale-105 transition-transform duration-500"
-                    />
-                </Link>
+        <>
+            <nav
+                className={cn(
+                    'fixed top-0 left-0 w-full z-50 transition-all duration-500 px-6 py-4',
+                    isScrolled || isMobileMenuOpen ? 'bg-background/80 backdrop-blur-md py-3' : 'bg-transparent'
+                )}
+            >
+                <div className="max-w-7xl mx-auto flex items-center justify-between">
+                    <Link to="/" className="group flex items-center gap-3">
+                        <img
+                            src="/Logo/Logo.png"
+                            alt="DQ Styling Logo"
+                            className="h-24 w-auto group-hover:scale-105 transition-transform duration-500"
+                        />
+                    </Link>
 
-                {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className={cn(
-                                'relative font-medium text-sm lg:text-base tracking-wide py-1 transition-colors duration-300 hover:text-accent group',
-                                location.pathname === link.path
-                                    ? 'text-accent'
-                                    : (isScrolled ? 'text-primary' : 'text-background')
-                            )}
-                        >
-                            {link.name}
-                            <span
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex items-center gap-8">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.path}
+                                to={link.path}
                                 className={cn(
-                                    'absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full',
-                                    location.pathname === link.path ? 'w-full' : 'w-0'
+                                    'relative font-medium text-sm lg:text-base tracking-wide py-1 transition-colors duration-300 hover:text-accent group',
+                                    location.pathname === link.path
+                                        ? 'text-accent'
+                                        : (isScrolled ? 'text-primary' : 'text-background')
                                 )}
-                            />
-                        </Link>
-                    ))}
-                </div>
+                            >
+                                {link.name}
+                                <span
+                                    className={cn(
+                                        'absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full',
+                                        location.pathname === link.path ? 'w-full' : 'w-0'
+                                    )}
+                                />
+                            </Link>
+                        ))}
+                    </div>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className={cn(
-                        "md:hidden p-2 rounded-full transition-colors z-50",
-                        isMobileMenuOpen || isScrolled ? "text-primary hover:bg-primary/10" : "text-background hover:bg-background/10"
-                    )}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label={isMobileMenuOpen ? "Sluit menu" : "Open menu"}
-                >
-                    {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
-                </button>
-            </div>
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        className={cn(
+                            "md:hidden p-2 rounded-full transition-colors z-50",
+                            isMobileMenuOpen || isScrolled ? "text-primary hover:bg-primary/10" : "text-background hover:bg-background/10"
+                        )}
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Sluit menu" : "Open menu"}
+                    >
+                        {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
+                    </button>
+                </div>
+            </nav>
 
             {/* Mobile Menu Overlay */}
             <div
@@ -115,6 +117,6 @@ export default function Navigation() {
                     </Link>
                 ))}
             </div>
-        </nav>
+        </>
     );
 }
