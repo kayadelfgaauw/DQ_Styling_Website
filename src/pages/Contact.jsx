@@ -70,7 +70,7 @@ export default function Contact() {
                             <div className="contact-info-item p-10 bg-accent/5 rounded-[3rem] space-y-4">
                                 <Mail className="text-accent w-10 h-10" aria-hidden="true" />
                                 <h3 className="font-hatton text-xl font-bold">E-mail</h3>
-                                <p className="opacity-70">info@dqstyling.nl</p>
+                                <p className="opacity-70">dqstyling@gmail.com</p>
                             </div>
                             <div className="contact-info-item p-10 bg-primary/5 rounded-[3rem] space-y-4">
                                 <h3 className="font-hatton text-xl font-bold">Openingstijden</h3>
@@ -81,12 +81,14 @@ export default function Contact() {
 
                     {/* Form Side */}
                     <div className="bg-primary text-background p-10 md:p-12 rounded-[4rem] clay-shadow border border-background/5">
-                        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                        <form className="space-y-6" action="https://formspree.io/f/xeelnvka" method="POST">
                             {/* ... labels and inputs ... */}
                             <div className="contact-form-child space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Naam</label>
                                 <input
                                     type="text"
+                                    name="naam"
+                                    required
                                     className="w-full bg-transparent border-b border-background/20 py-4 focus:border-accent outline-none transition-all text-xl font-light placeholder:opacity-30"
                                     placeholder="Uw volledige naam"
                                 />
@@ -95,6 +97,8 @@ export default function Contact() {
                                 <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">E-mail</label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    required
                                     className="w-full bg-transparent border-b border-background/20 py-4 focus:border-accent outline-none transition-all text-xl font-light placeholder:opacity-30"
                                     placeholder="uw@email.nl"
                                 />
@@ -103,6 +107,8 @@ export default function Contact() {
                             <div className="contact-form-child space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Bericht</label>
                                 <textarea
+                                    name="bericht"
+                                    required
                                     rows={3}
                                     className="w-full bg-transparent border-b border-background/20 py-4 focus:border-accent outline-none transition-all text-xl font-light resize-none placeholder:opacity-30"
                                     placeholder="Hoe kunnen we u helpen?"

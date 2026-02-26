@@ -54,7 +54,7 @@ export default function Footer() {
                         </li>
                         <li className="flex items-center gap-3">
                             <Mail size={20} className="shrink-0 text-accent" aria-hidden="true" />
-                            <a href="mailto:info@dqstyling.nl" className="hover:text-accent transition-colors">info@dqstyling.nl</a>
+                            <a href="mailto:dqstyling@gmail.com" className="hover:text-accent transition-colors">dqstyling@gmail.com</a>
                         </li>
                     </ul>
                 </div>
