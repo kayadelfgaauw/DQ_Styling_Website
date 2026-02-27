@@ -19,11 +19,14 @@ import JSONLD from './components/JSONLD';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function ScrollToTop() {
+function ScrollToTop({ lenisRef }) {
     const { pathname } = useLocation();
     useEffect(() => {
+        if (lenisRef.current) {
+            lenisRef.current.scrollTo(0, { immediate: true });
+        }
         window.scrollTo(0, 0);
-    }, [pathname]);
+    }, [pathname, lenisRef]);
     return null;
 }
 
@@ -68,7 +71,7 @@ export default function App() {
 
     return (
         <Router>
-            <ScrollToTop />
+            <ScrollToTop lenisRef={lenisRef} />
             <JSONLD />
             <div className="flex flex-col min-h-screen">
                 <Navigation />
