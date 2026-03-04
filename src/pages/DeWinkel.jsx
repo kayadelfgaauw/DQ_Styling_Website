@@ -88,22 +88,22 @@ export default function DeWinkel() {
                         <div className="feature-card p-10 bg-primary/5 rounded-[3rem] space-y-4 hover:bg-primary/10 transition-colors duration-500">
                             <Sparkles className="text-accent w-10 h-10" aria-hidden="true" />
                             <h3 className="font-hatton text-xl font-bold">Topkwaliteit</h3>
-                            <p className="text-sm opacity-80">Zijden bloemen die bijna niet van echt te onderscheiden zijn.</p>
+                            <p className="text-sm opacity-90">Zijden bloemen die bijna niet van echt te onderscheiden zijn.</p>
                         </div>
                         <div className="feature-card p-10 bg-accent/5 rounded-[3rem] space-y-4 hover:bg-accent/10 transition-colors duration-500">
                             <Heart className="text-accent w-10 h-10" aria-hidden="true" />
                             <h3 className="font-hatton text-xl font-bold">Maatwerk</h3>
-                            <p className="text-sm opacity-80">Wij maken boeketten die perfect passen bij jouw interieur.</p>
+                            <p className="text-sm opacity-90">Wij maken boeketten die perfect passen bij jouw interieur.</p>
                         </div>
                         <div className="feature-card p-10 bg-accent/5 rounded-[3rem] space-y-4 hover:bg-accent/10 transition-colors duration-500">
                             <Gift className="text-accent w-10 h-10" aria-hidden="true" />
                             <h3 className="font-hatton text-xl font-bold">Cadeaus</h3>
-                            <p className="text-sm opacity-80">Cadeaubonnen en prachtige gepersonaliseerde geschenken.</p>
+                            <p className="text-sm opacity-90">Cadeaubonnen en prachtige gepersonaliseerde geschenken.</p>
                         </div>
                         <div className="feature-card p-10 bg-primary/5 rounded-[3rem] space-y-4 hover:bg-primary/10 transition-colors duration-500">
                             <Clock className="text-accent w-10 h-10" aria-hidden="true" />
                             <h3 className="font-hatton text-xl font-bold">Duurzaam</h3>
-                            <p className="text-sm opacity-80">Stijlvolle creaties die jarenlang mooi blijven zonder onderhoud.</p>
+                            <p className="text-sm opacity-90">Stijlvolle creaties die jarenlang mooi blijven zonder onderhoud.</p>
                         </div>
                     </div>
                 </div>

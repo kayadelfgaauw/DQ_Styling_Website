@@ -16,7 +16,7 @@ export default function Footer() {
                             className="h-16 w-auto"
                         />
                     </Link>
-                    <p className="opacity-80 leading-relaxed font-light">
+                    <p className="opacity-90 leading-relaxed font-light">
                         Handgemaakte vazen, luxe zijden bloemen en unieke woonaccessoires in het hart van Burgh-Haamstede.
                     </p>
                     <div className="flex gap-4">
@@ -32,7 +32,7 @@ export default function Footer() {
                 {/* Quick Links */}
                 <div>
                     <h3 className="font-hatton text-xl font-bold mb-6">Navigatie</h3>
-                    <ul className="space-y-4 font-light opacity-80">
+                    <ul className="space-y-4 font-light opacity-90">
                         <li><Link to="/de-winkel" className="hover:text-accent transition-colors">De Winkel</Link></li>
                         <li><Link to="/take-a-look" className="hover:text-accent transition-colors">Take a Look</Link></li>
                         <li><Link to="/des-pots" className="hover:text-accent transition-colors">Des Pots</Link></li>
@@ -43,7 +43,7 @@ export default function Footer() {
                 {/* Contact Info */}
                 <div>
                     <h3 className="font-hatton text-xl font-bold mb-6">Contact</h3>
-                    <ul className="space-y-4 font-light opacity-80">
+                    <ul className="space-y-4 font-light opacity-90">
                         <li className="flex items-start gap-3">
                             <MapPin size={20} className="shrink-0 text-accent" aria-hidden="true" />
                             <span>Ring 14, 4328AE<br />Burgh-Haamstede</span>
@@ -62,12 +62,12 @@ export default function Footer() {
                 {/* Opening Hours */}
                 <div>
                     <h3 className="font-hatton text-xl font-bold mb-6">Openingstijden</h3>
-                    <ul className="space-y-4 font-light opacity-80">
+                    <ul className="space-y-4 font-light opacity-90">
                         <li className="flex justify-between">
                             <span>Woensdag - Zaterdag</span>
                             <span>10:00 – 17:00</span>
                         </li>
-                        <li className="flex justify-between opacity-50">
+                        <li className="flex justify-between opacity-70">
                             <span>Zondag - Dinsdag</span>
                             <span>Gesloten</span>
                         </li>
@@ -75,7 +75,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto pt-10 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-60 font-light">
+            <div className="max-w-7xl mx-auto pt-10 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-80 font-light">
                 <p>© {currentYear} DQ Styling. Alle rechten voorbehouden.</p>
                 <div className="flex gap-6">
                     <a href="#" className="hover:text-accent">Privacy Policy</a>

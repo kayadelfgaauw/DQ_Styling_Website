@@ -38,7 +38,7 @@ export default function DesPots() {
                         </p>
                         <div className="bg-primary/5 p-8 rounded-[3rem] space-y-4">
                             <h3 className="font-hatton text-2xl font-bold">Wat maakt Des Pots bijzonder?</h3>
-                            <ul className="space-y-2 opacity-80">
+                            <ul className="space-y-2 opacity-90">
                                 <li>– Unieke, artistieke ontwerpen</li>
                                 <li>– Handgemaakte details en hoogwaardige materialen</li>
                                 <li>– Bijzondere glazuren, structuren en vormen</li>
@@ -49,7 +49,7 @@ export default function DesPots() {
                             <p className="font-bold text-primary">
                                 De collectie van Des Pots mag niet online aangeboden worden.
                             </p>
-                            <p className="opacity-80">
+                            <p className="opacity-90">
                                 Voor beschikbaarheid, prijzen of meer informatie kun je mailen naar:
                             </p>
                             <a href="mailto:dqstyling@gmail.com" className="flex items-center gap-3 text-secondary font-bold hover:text-accent transition-colors">

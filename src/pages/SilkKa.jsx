@@ -46,7 +46,7 @@ export default function SilkKa() {
                         </p>
                         <div className="bg-primary/5 p-8 rounded-[3rem] space-y-4">
                             <h3 className="font-hatton text-2xl font-bold">Het geheim van Silk-ka:</h3>
-                            <ul className="space-y-2 opacity-80">
+                            <ul className="space-y-2 opacity-90">
                                 <li>– Natuurgetrouwe kleuren en structuren</li>
                                 <li>– Luxe materialen en verfijnde afwerking</li>
                                 <li>– Seizoenscollecties volgens de laatste trends</li>
@@ -57,7 +57,7 @@ export default function SilkKa() {
                             Met Silk-ka creëer je een blijvende, stijlvolle uitstraling zonder onderhoud – perfect voor wie houdt van luxe, sfeer en gemak.
                         </p>
                         <div className="bg-accent/10 p-8 rounded-[3rem] flex flex-col gap-4 border border-accent/20">
-                            <p className="opacity-80">
+                            <p className="opacity-90">
                                 Benieuwd naar de mogelijkheden of een specifiek item?
                             </p>
                             <a href="mailto:dqstyling@gmail.com" className="flex items-center gap-3 text-secondary font-bold hover:text-accent transition-colors">

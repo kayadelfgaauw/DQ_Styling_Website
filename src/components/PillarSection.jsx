@@ -49,7 +49,7 @@ export default function PillarSection() {
     return (
         <section ref={containerRef} className="relative h-screen bg-primary overflow-hidden flex items-center rounded-[4rem] mx-6">
             <div className="absolute top-12 left-12 md:left-24 z-10">
-                <h2 className="font-hatton text-4xl md:text-6xl font-bold text-background opacity-30">Our Essence</h2>
+                <h2 className="font-hatton text-4xl md:text-6xl font-bold text-background opacity-50">Our Essence</h2>
             </div>
 
             <div ref={scrollRef} className="flex gap-12 md:gap-24 pl-12 md:pl-24 pr-48 items-center h-full">
@@ -63,7 +63,7 @@ export default function PillarSection() {
                             <h3 className="font-hatton text-3xl md:text-5xl font-bold text-primary group-hover:text-background transition-colors duration-500">
                                 {pillar.title}
                             </h3>
-                            <p className="text-lg opacity-70 group-hover:text-background group-hover:opacity-90 transition-colors duration-500">
+                            <p className="text-lg opacity-90 group-hover:text-background group-hover:opacity-100 transition-colors duration-500">
                                 {pillar.description}
                             </p>
                         </div>

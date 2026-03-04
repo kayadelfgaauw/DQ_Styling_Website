@@ -158,6 +158,7 @@ export default function Home() {
                         <button
                             key={idx}
                             onClick={() => setCurrentSlide(idx)}
+                            aria-label={`Ga naar slide ${idx + 1}`}
                             className={`w-12 h-1 bg-background transition-all duration-500 ${idx === currentSlide ? 'opacity-100' : 'opacity-30'
                                 }`}
                         />
@@ -216,7 +217,7 @@ export default function Home() {
                     <h2 className="font-hatton text-5xl md:text-7xl font-bold">
                         Bezoek de <span className="italic text-accent">DQ Store</span>
                     </h2>
-                    <p className="text-xl md:text-2xl font-light opacity-80 leading-relaxed">
+                    <p className="text-xl md:text-2xl font-light opacity-90 leading-relaxed">
                         Laat je onderdompelen in een wereld van kleur en kwaliteit. Van handgemaakte oestervazen tot zijden boeketten die niet van echt te onderscheiden zijn.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">

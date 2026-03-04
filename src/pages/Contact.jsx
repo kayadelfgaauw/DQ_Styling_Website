@@ -60,21 +60,21 @@ export default function Contact() {
                             <div className="contact-info-item p-10 bg-primary/5 rounded-[3rem] space-y-4">
                                 <MapPin className="text-accent w-10 h-10" aria-hidden="true" />
                                 <h3 className="font-hatton text-xl font-bold">Adres</h3>
-                                <p className="opacity-70">Ring 14, 4328AE<br />Burgh-Haamstede</p>
+                                <p className="opacity-90">Ring 14, 4328AE<br />Burgh-Haamstede</p>
                             </div>
                             <div className="contact-info-item p-10 bg-accent/5 rounded-[3rem] space-y-4">
                                 <Phone className="text-accent w-10 h-10" aria-hidden="true" />
                                 <h3 className="font-hatton text-xl font-bold">Telefoon</h3>
-                                <p className="opacity-70">06 21 41 45 13</p>
+                                <p className="opacity-90">06 21 41 45 13</p>
                             </div>
                             <div className="contact-info-item p-10 bg-accent/5 rounded-[3rem] space-y-4">
                                 <Mail className="text-accent w-10 h-10" aria-hidden="true" />
                                 <h3 className="font-hatton text-xl font-bold">E-mail</h3>
-                                <p className="opacity-70">dqstyling@gmail.com</p>
+                                <p className="opacity-90">dqstyling@gmail.com</p>
                             </div>
                             <div className="contact-info-item p-10 bg-primary/5 rounded-[3rem] space-y-4">
                                 <h3 className="font-hatton text-xl font-bold">Openingstijden</h3>
-                                <p className="opacity-70">Wo t/m Za<br />10:00 – 17:00</p>
+                                <p className="opacity-90">Wo t/m Za<br />10:00 – 17:00</p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export default function Contact() {
                         <form className="space-y-6" action="https://formspree.io/f/xeelnvka" method="POST">
                             {/* ... labels and inputs ... */}
                             <div className="contact-form-child space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Naam</label>
+                                <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-70">Naam</label>
                                 <input
                                     type="text"
                                     name="naam"
@@ -94,7 +94,7 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="contact-form-child space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">E-mail</label>
+                                <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-70">E-mail</label>
                                 <input
                                     type="email"
                                     name="email"
@@ -105,7 +105,7 @@ export default function Contact() {
                             </div>
 
                             <div className="contact-form-child space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Bericht</label>
+                                <label className="text-xs font-bold uppercase tracking-[0.2em] opacity-70">Bericht</label>
                                 <textarea
                                     name="bericht"
                                     required

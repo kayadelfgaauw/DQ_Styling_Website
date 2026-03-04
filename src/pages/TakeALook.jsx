@@ -28,7 +28,7 @@ export default function TakeALook() {
 
             <section className="py-24 px-6 max-w-7xl mx-auto space-y-12 text-center">
                 <h2 className="font-hatton text-4xl md:text-6xl font-bold">Uniek in Elk <span className="text-accent italic">Detail</span></h2>
-                <p className="text-xl max-w-3xl mx-auto font-light opacity-80 leading-relaxed">
+                <p className="text-xl max-w-3xl mx-auto font-light opacity-90 leading-relaxed">
                     Stap binnen in de wereld van DQ Styling. Elke creatie is met de hand samengesteld, met oog voor balans en kleur. Ontdek hoe wij zijden bloemen transformeren tot blijvende kunstwerken voor uw interieur.
                 </p>
             </section>
