@@ -112,7 +112,7 @@ export default function DeWinkel() {
                 <div className="mt-32 relative h-[600px] overflow-hidden rounded-[4rem] clay-shadow">
                     <img
                         src="/Images/Home Page/image00001.webp"
-                        alt="Interieur DQ Store"
+                        alt="Sfeervolle interieur van de DQ Store met zijden bloemcreaties en handgemaakte vazen"
                         className="w-full h-full object-cover transition-transform duration-[20s] hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]" />

@@ -23,7 +23,7 @@ export default function Footer() {
                         <a href="https://instagram.com/dq.styling" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-background/20 rounded-full flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300" aria-label="Volg ons op Instagram">
                             <Instagram size={20} aria-hidden="true" />
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-background/20 rounded-full flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300" aria-label="Volg ons op Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61555699011343" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-background/20 rounded-full flex items-center justify-center hover:bg-accent hover:border-accent transition-all duration-300" aria-label="Volg ons op Facebook">
                             <Facebook size={20} aria-hidden="true" />
                         </a>
                     </div>

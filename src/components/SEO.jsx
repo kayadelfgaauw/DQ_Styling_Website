@@ -9,7 +9,7 @@ const SEO = ({ title, description, url, image }) => {
     const fullTitle = title ? `${title} | ${siteName}` : siteName;
     const defaultDescription = "DQ Styling - Specialist in luxe zijden bloemen en handgemaakte vazen van Des Pots in Burgh-Haamstede.";
     const metaDescription = description || defaultDescription;
-    const baseUrl = "https://dqstyling.nl"; // Hypothetical base URL
+    const baseUrl = "https://www.dqstyling.nl";
     const canonicalUrl = url ? `${baseUrl}${url}` : baseUrl;
 
     return (

@@ -32,7 +32,7 @@ export default function SilkKa() {
                 <div className="relative order-2 lg:order-1">
                     <img
                         src="/Images/Home Page/image00005.webp"
-                        alt="Silk-ka Bloemen"
+                        alt="Luxe Silk-ka zijden bloemen met Real Touch techniek in zachte tinten"
                         className="rounded-[4rem] clay-shadow aspect-[4/5] object-cover"
                     />
                 </div>

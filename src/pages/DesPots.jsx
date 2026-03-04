@@ -61,7 +61,7 @@ export default function DesPots() {
                 <div className="relative">
                     <img
                         src="/Images/Home Page/image00001.webp"
-                        alt="Des Pots Vazen"
+                        alt="Handgemaakte Des Pots vazen met organische vormen en unieke glazuren"
                         className="rounded-[4rem] clay-shadow aspect-[4/5] object-cover"
                     />
                     <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full flex items-center justify-center text-background font-bold rotate-12">
