@@ -1,11 +1,10 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Star, Heart, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import { useEffect } from 'react';
 
 const heroImages = [
     { url: '/Images/Home Page/image00001.webp', alt: 'Interieur van DQ Styling met handgemaakte vazen op artistieke wandplanken.' },
@@ -17,17 +16,35 @@ const heroImages = [
 
 export default function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [imagesReady, setImagesReady] = useState(false);
     const containerRef = useRef(null);
     const introRef = useRef(null);
     const quoteRef = useRef(null);
     const leadInRef = useRef(null);
 
+    // Preload all hero slider images
     useEffect(() => {
+        let loadedCount = 0;
+        heroImages.forEach((img) => {
+            const image = new Image();
+            image.onload = () => {
+                loadedCount++;
+                // Mark ready once the first image is loaded (don't wait for all)
+                if (loadedCount === 1) {
+                    setImagesReady(true);
+                }
+            };
+            image.src = img.url;
+        });
+    }, []);
+
+    useEffect(() => {
+        if (!imagesReady) return;
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % heroImages.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, []);
+    }, [imagesReady]);
 
     useGSAP(() => {
         // Hero section intro animations
@@ -107,12 +124,13 @@ export default function Home() {
                             alt={img.alt}
                             fetchPriority={idx === 0 ? "high" : "auto"}
                             loading="eager"
-                            className="w-full h-full object-cover scale-105 animate-[kenburns_10s_ease-in-out_infinite]"
+                            decoding="async"
+                            className={`w-full h-full object-cover scale-105 animate-[kenburns_10s_ease-in-out_infinite] transition-opacity duration-700 ${imagesReady ? 'opacity-100' : 'opacity-0'}`}
                         />
                         {/* Gradient Overlays for Readability */}
-                        <div className="absolute inset-0 bg-primary/20 backdrop-blur-[2px]" />
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
+                        <div className={`absolute inset-0 bg-primary/20 backdrop-blur-[2px] transition-opacity duration-700 ${imagesReady ? 'opacity-100' : 'opacity-0'}`} />
+                        <div className={`absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40 transition-opacity duration-700 ${imagesReady ? 'opacity-100' : 'opacity-0'}`} />
+                        <div className={`absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 transition-opacity duration-700 ${imagesReady ? 'opacity-100' : 'opacity-0'}`} />
                     </div>
                 ))}
 

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -7,6 +7,7 @@ export default function CinematicHero({ title, subtitle, image, alt, imagePositi
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
     const imageRef = useRef(null);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     useGSAP(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.5 } });
@@ -40,12 +41,14 @@ export default function CinematicHero({ title, subtitle, image, alt, imagePositi
                         alt={alt || title}
                         fetchPriority="high"
                         loading="eager"
-                        className={`w-full h-full object-cover ${imagePosition}`}
+                        decoding="async"
+                        onLoad={() => setImageLoaded(true)}
+                        className={`w-full h-full object-cover ${imagePosition} transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                     />
                     {/* Gradient Overlays for Readability */}
-                    <div className="absolute inset-0 bg-primary/20 backdrop-blur-[1px]" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.4)_0%,transparent_70%)]" />
+                    <div className={`absolute inset-0 bg-primary/20 backdrop-blur-[1px] transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} />
+                    <div className={`absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} />
+                    <div className={`absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.4)_0%,transparent_70%)] transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} />
                 </div>
             )}
 

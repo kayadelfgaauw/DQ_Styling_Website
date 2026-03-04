@@ -19,6 +19,18 @@ import JSONLD from './components/JSONLD';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// All hero images across all routes – preloaded on app start
+const heroImageUrls = [
+    '/Images/Home Page/image00001.webp',
+    '/Images/Home Page/image00002.webp',
+    '/Images/Home Page/image00003.webp',
+    '/Images/Home Page/image00004.webp',
+    '/Images/Home Page/image00005.webp',
+    '/Images/Silkka_hero.webp',
+    '/Images/Des Pots/Hero_despots.webp',
+    '/Images/Take a Look/image00119.webp',
+];
+
 function ScrollToTop({ lenisRef }) {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -32,6 +44,14 @@ function ScrollToTop({ lenisRef }) {
 
 export default function App() {
     const lenisRef = useRef();
+
+    // Preload all hero images on app start
+    useEffect(() => {
+        heroImageUrls.forEach((url) => {
+            const img = new Image();
+            img.src = url;
+        });
+    }, []);
 
     useLayoutEffect(() => {
         const lenis = new Lenis({
